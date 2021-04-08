@@ -43,8 +43,8 @@ contract TokenLock is Ownable {
         onlyOwner
     {
         require(ReleaseAddresses[_recipient].amount == 0, "Gate already exists, must revoke first.");
-        require(_vestingCliffInDays <= 3, "Cliff greater than 3 days");
-        require(_DurationInDays <= 10, "Duration greater than 10 days");
+        require(_vestingCliffInDays >= 0, "Cliff not less than 0 days");
+        require(_DurationInDays >= 0, "Duration not less than 0 days");
         
         uint256 amountVestedPerDay = _amount.div(_DurationInDays);
         require(amountVestedPerDay > 0, "amountVestedPerDay > 0");
@@ -69,7 +69,7 @@ contract TokenLock is Ownable {
         uint16 daysVested;
         uint256 amountVested;
         (daysVested, amountVested) = calculateTokenClaim(msg.sender);
-        require(amountVested > 0, "Vested is 0");
+        require(amountVested > 0, "Vested must be greater than 0");
 
         TokenGate storage tokenRelease = ReleaseAddresses[msg.sender];
         tokenRelease.daysClaimed = uint16(tokenRelease.daysClaimed.add(daysVested));

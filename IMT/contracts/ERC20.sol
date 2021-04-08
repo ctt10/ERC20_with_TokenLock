@@ -117,7 +117,7 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
      * - the caller must have a balance of at least `amount`.
      */
     function transfer(address recipient, uint256 amount) public virtual override returns (bool) {
-        require(amount != 0, "Amount entered is Zero");
+        require(amount > 0, "Amount entered is Zero or less");
         _transfer(_msgSender(), recipient, amount);
         return true;
     }
@@ -321,6 +321,6 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
     function _beforeTokenTransfer(address sender, address recipient, uint256 amount) internal virtual { 
         require(sender != address(0), "ERC20: approve from the zero address");
         require(recipient != address(0), "ERC20: approve to the zero address");
-        require(amount != 0, "Amount entered is Zero"); 
+        require(amount > 0, "Amount entered is Zero or less"); 
     }
 }
