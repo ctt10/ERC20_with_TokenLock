@@ -48,7 +48,7 @@ module.exports = {
     //  network_id: "*",       // Any network (default: none)
     // },
     mainnet: {
-      networkCheckTimeout: 100000,
+      networkCheckTimeout: 500000,
       provider: () => new HDWalletProvider(mnemonic, 'https://mainnet.infura.io/v3/${infuraKey}'),
       gas: 5500000, 
       gasPrice: 25000000000,
@@ -68,8 +68,8 @@ module.exports = {
     // Useful for deploying to a public network.
     // NB: It's important to wrap the provider as a function.
     ropsten: {
-      networkCheckTimeout: 100000,
-      provider: () => new HDWalletProvider(mnemonic, 'https://ropsten.infura.io/v3/b349389b09724c1a8a5f220922c1599a'),
+      networkCheckTimeout: 500000,
+      provider: () => new HDWalletProvider(mnemonic, 'https://ropsten.infura.io/v3/3ed220d1aba24a89b6f592733069b9d4'),
       gas: 5500000,       // Ropsten has a lower block limit than mainnet
       gasPrice: 25000000000,
       confirmations: 2,     // # of confs to wait between deployments. (default: 0)
