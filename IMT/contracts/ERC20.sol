@@ -34,9 +34,9 @@ import "./SafeMath.sol";
 contract ERC20 is Context, IERC20, IERC20Metadata {
     using SafeMath for uint256;
 
-    mapping (address => uint256) private _balances;
+    mapping (address => uint256) _balances;
 
-    mapping (address => mapping (address => uint256)) private _allowances;
+    mapping (address => mapping (address => uint256)) _allowances;
 
     uint256 private _totalSupply;
     uint8 private _decimals;

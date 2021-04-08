@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy": "npm install && truffle migrate --network mainnet --reset "
+    "deploy": "npm install && truffle migrate --network mainnet --reset ",
     "test": "npm install && truffle migrate --network ropsten --reset "
   },
   "author": "",
