@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "npm install && truffle migrate --network mainnet --reset ",
+    "test": "npm install && truffle migrate --network ropsten --reset "
   },
   "author": "",
   "license": "ISC",

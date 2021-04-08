@@ -20863,14 +20863,91 @@
   },
   "networks": {
     "3": {
-      "events": {},
+      "events": {
+        "0xaef3111f8c33136698c26c04dfacf225743d25ff7fd6b3a47b616ea7193441b7": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "recipient",
+              "type": "address"
+            }
+          ],
+          "name": "GateAdded",
+          "type": "event"
+        },
+        "0xdbb952fdbbbb5fd2e64fb9545b75b9fa295cb55a4ac343abca3d25d7e737345d": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "amountVested",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "amountNotVested",
+              "type": "uint256"
+            }
+          ],
+          "name": "GateRevoked",
+          "type": "event"
+        },
+        "0xbf2f4bf7dd61dd713f43b7b282ad76663ca54e146184a88bb5c3bda314fe83f5": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "amountClaimed",
+              "type": "uint256"
+            }
+          ],
+          "name": "GateTokensClaimed",
+          "type": "event"
+        },
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        }
+      },
       "links": {},
-      "address": "0x3b1C75973c63760a76e626fDD1125A438eD1f37d",
-      "transactionHash": "0x0ea146591d8db7527dabb4ce61fa823417e80f6b05e4455bbcb8bf1b8ce4b738"
+      "address": "0xfB42D6d5b1E795a3C07644C4f295b16b1c983cA9",
+      "transactionHash": "0xab28f53a6c885c50724edac31cee0f84213ae180681b6e1ac01df42386989c04"
     }
   },
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-08T09:10:01.313Z",
+  "updatedAt": "2021-04-08T09:41:32.935Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
